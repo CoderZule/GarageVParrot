@@ -64,8 +64,8 @@
                 </a>
                 <div id="collapseOpening" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="buttons.html">Créer</a>
-                        <a class="collapse-item" href="cards.html">Liste</a>
+                        <a class="collapse-item" href="{{route('opening-hours.create')}}">Créer</a>
+                        <a class="collapse-item" href="{{route('opening-hours.index')}}">Liste</a>
                     </div>
                 </div>
             </li>

@@ -27,9 +27,9 @@
     <link href="{{asset('HomePageTemplate/assets/css/style.css')}}" rel="stylesheet">
 
     <!-- =======================================================
-  * HomePageTemplate Name: NewBiz
+  * HomePageTemplate Name: Garage V.Parrot
   * Updated: May 30 2023 with Bootstrap v5.3.0
-  * HomePageTemplate URL: https://bootstrapmade.com/newbiz-bootstrap-business-HomePageTemplate/
+  * HomePageTemplate URL: https://bootstrapmade.com/Garage V.Parrot-bootstrap-business-HomePageTemplate/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
@@ -43,34 +43,17 @@
 
             <div class="logo">
                 <!-- Uncomment below if you prefer to use an text logo -->
-                <!-- <h1><a href="index.html">NewBiz</a></h1> -->
+                <!-- <h1><a href="index.html">Garage V.Parrot</a></h1> -->
                 <a href="index.html"><img src="{{asset('HomePageTemplate/assets/img/logo.jpg')}}" alt="" class="img-fluid"></a>
             </div>
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">About</a></li>
+                    <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
+                    <li><a class="nav-link scrollto" href="#about">À propos</a></li>
                     <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                    <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
-                        </ul>
-                    </li>
+                    <li><a class="nav-link scrollto " href="#portfolio">Véhicules d’occasion</a></li>
+                    <li><a class="nav-link scrollto" href="#team">Équipe</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -88,7 +71,7 @@
             </div>
 
             <div class="hero-info" data-aos="zoom-in" data-aos-delay="100">
-                <h2>Réparation et vente de voitures,<br><span> notre expertise</span><br> à votre service!</h2>
+                <h2>Réparation et vente de véhicules d'occasion,<br><span> notre expertise</span><br> à votre service!</h2>
                 <div>
                     <a href="/login" class="btn-get-started scrollto">Commancer</a>
                     <a href="#services" class="btn-services scrollto">Notre Services</a>
@@ -103,81 +86,31 @@
         <!-- ======= About Section ======= -->
         <section id="about">
             <div class="container" data-aos="fade-up">
-
                 <header class="section-header">
-                    <h3>About Us</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h3>À propos de nous</h3>
+                    <p>Notre garage dédié à la réparation et à la vente de véhicules d'occasion est votre destination de confiance pour tous vos besoins automobiles.</p>
                 </header>
-
                 <div class="row about-container">
-
                     <div class="col-lg-6 content order-lg-1 order-2">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-
+                        <p>Que vous ayez besoin de réparer votre véhicule actuel ou de trouver une voiture d'occasion fiable, nous sommes là pour vous accompagner.</p>
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                            <div class="icon"><i class="bi bi-card-checklist"></i></div>
-                            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-                            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                            <div class="icon"><i class="bi bi-hammer"></i></div>
+                            <h4 class="title"><a href="">Réparation</a></h4>
+                            <p class="description">Notre équipe expérimentée de mécaniciens qualifiés est prête à résoudre tous les problèmes mécaniques que votre voiture peut rencontrer. Nous mettons en œuvre notre expertise et utilisons les derniers équipements pour assurer des réparations de haute qualité. Votre sécurité et votre satisfaction sont notre priorité absolue.</p>
                         </div>
-
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                            <div class="icon"><i class="bi bi-brightness-high"></i></div>
-                            <h4 class="title"><a href="">Magni Dolores</a></h4>
-                            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                            <div class="icon"><i class="bi bi-car-front"></i></div>
+                            <h4 class="title"><a href="">Vente</a></h4>
+                            <p class="description">Si vous êtes à la recherche d'une voiture d'occasion, nous vous proposons un large choix de véhicules soigneusement sélectionnés. Chaque voiture dans notre inventaire est rigoureusement inspectée pour assurer sa qualité et sa fiabilité.</p>
                         </div>
-
-                        <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-                            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-                            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-                        </div>
-
                     </div>
-
                     <div class="col-lg-6 background order-lg-2" data-aos="zoom-in">
-                        <img src="{{asset('HomePageTemplate/assets/img/about-img.svg')}}" class="img-fluid" alt="">
+                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/woman-car-mechanic-3865864-3236911.png" class="img-fluid large-image" alt="">
                     </div>
                 </div>
-
-                <div class="row about-extra">
-                    <div class="col-lg-6" data-aos="fade-right">
-                        <img src="{{asset('HomePageTemplate/assets/img/about-extra-1.svg')}}" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-6 pt-5 pt-lg-0" data-aos="fade-left">
-                        <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
-                        <p>
-                            Ipsum in aspernatur ut possimus sint. Quia omnis est occaecati possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
-                        </p>
-                        <p>
-                            Ad vitae recusandae odit possimus. Quaerat cum ipsum corrupti. Odit qui asperiores ea corporis deserunt veritatis quidem expedita perferendis. Qui rerum eligendi ex doloribus quia sit. Porro rerum eum eum.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row about-extra">
-                    <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
-                        <img src="{{asset('HomePageTemplate/assets/img/about-extra-2.svg')}}" class="img-fluid" alt="">
-                    </div>
-
-                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
-                        <h4>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4>
-                        <p>
-                            Delectus alias ut incidunt delectus nam placeat in consequatur. Sed cupiditate quia ea quis. Voluptas nemo qui aut distinctio. Cumque fugit earum est quam officiis numquam. Ducimus corporis autem at blanditiis beatae incidunt sunt.
-                        </p>
-                        <p>
-                            Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae debitis. Dolorem cupiditate est perferendis iusto.
-                        </p>
-                        <p>
-                            Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint quia modi. Numquam est aut fuga mollitia exercitationem nam accusantium provident quia.
-                        </p>
-                    </div>
-
-                </div>
-
             </div>
-        </section><!-- End About Section -->
+        </section>
+        <!-- End About Section -->
 
         <!-- ======= Services Section ======= -->
         <section id="services" class="section-bg">
@@ -190,7 +123,7 @@
 
                 <div class="row justify-content-center" style="display: flex; flex-wrap: wrap; margin-top: 20px;">
                     @foreach ($services as $service)
-                    <div class="col-md-6 col-lg-5 mb-4" data-aos="zoom-in" data-aos-delay="100" style="display: flex;">
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="100" style="display: flex;">
                         <div class="card" style="display: flex; flex-direction: column; height: 100%;">
                             <div class="image" style="flex: 0 0 auto;">
                                 <img src="{{ asset('services_images/' . $service->image) }}" alt="Service Image" style="width: 100%; height: auto;">
@@ -206,86 +139,18 @@
 
 
             </div>
-        </section><!-- End Services Section -->
+        </section>
+        <!-- End Services Section -->
 
-        <!-- ======= Why Us Section ======= -->
-        <section id="why-us">
-            <div class="container" data-aos="fade-up">
-                <header class="section-header">
-                    <h3>Why choose us?</h3>
-                    <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
-                </header>
 
-                <div class="row row-eq-height justify-content-center">
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card" data-aos="zoom-in" data-aos-delay="100">
-                            <i class="bi bi-calendar4-week"></i>
-                            <div class="card-body">
-                                <h5 class="card-title">Corporis dolorem</h5>
-                                <p class="card-text">Deleniti optio et nisi dolorem debitis. Aliquam nobis est temporibus sunt ab inventore officiis aut voluptatibus.</p>
-                                <a href="#" class="readmore">Read more </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card" data-aos="zoom-in" data-aos-delay="200">
-                            <i class="bi bi-camera-reels"></i>
-                            <div class="card-body">
-                                <h5 class="card-title">Voluptates dolores</h5>
-                                <p class="card-text">Voluptates nihil et quis omnis et eaque omnis sint aut. Ducimus dolorum aspernatur.</p>
-                                <a href="#" class="readmore">Read more </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card" data-aos="zoom-in" data-aos-delay="300">
-                            <i class="bi bi-chat-square-text"></i>
-                            <div class="card-body">
-                                <h5 class="card-title">Eum ut aspernatur</h5>
-                                <p class="card-text">Autem quod nesciunt eos ea aut amet laboriosam ab. Eos quis porro in non nemo ex. </p>
-                                <a href="#" class="readmore">Read more </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row counters" data-aos="fade-up" data-aos-delay="100">
-
-                    <div class="col-lg-3 col-6 text-center">
-                        <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-                        <p>Clients</p>
-                    </div>
-
-                    <div class="col-lg-3 col-6 text-center">
-                        <span data-purecounter-start="0" data-purecounter-end="421" data-purecounter-duration="1" class="purecounter"></span>
-                        <p>Projects</p>
-                    </div>
-
-                    <div class="col-lg-3 col-6 text-center">
-                        <span data-purecounter-start="0" data-purecounter-end="1364" data-purecounter-duration="1" class="purecounter"></span>
-                        <p>Hours Of Support</p>
-                    </div>
-
-                    <div class="col-lg-3 col-6 text-center">
-                        <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
-                        <p>Hard Workers</p>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Why Us Section -->
+        <!-- End Why Us Section -->
 
         <!-- ======= Portfolio Section ======= -->
         <section id="portfolio" class="clearfix">
             <div class="container" data-aos="fade-up">
 
                 <header class="section-header">
-                    <h3 class="section-title">Our Portfolio</h3>
+                    <h3 class="section-title">Véhicules d’occasion</h3>
                 </header>
 
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -437,7 +302,7 @@
             <div class="container" data-aso="zoom-in">
 
                 <header class="section-header">
-                    <h3>Testimonials</h3>
+                    <h3>Témoignages</h3>
                 </header>
 
                 <div class="row justify-content-center">
@@ -515,161 +380,43 @@
         <section id="team">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
-                    <h3>Team</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                    <h3>Équipe
+                    </h3>
+                    <p>Notre équipe est composée de professionnels de l'automobile chevronnés et passionnés, dévoués à leur métier</p>
                 </div>
 
                 <div class="row">
 
+                    @foreach($users as $user)
                     <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="100">
                         <div class="member">
-                            <img src="{{asset('HomePageTemplate/assets/img/team-1.jpg')}}" class="img-fluid" alt="">
+                            <img src="{{ asset('employee_admin_images/' . $user->image) }}" class="img-fluid user-image" alt="">
                             <div class="member-info">
                                 <div class="member-info-content">
-                                    <h4>Walter White</h4>
-                                    <span>Chief Executive Officer</span>
-                                    <div class="social">
-                                        <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
+                                    <h4>{{ $user->name }}</h4>
+                                    <span>{{ $user->role->name }}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    @endforeach
 
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="200">
-                        <div class="member">
-                            <img src="{{asset('HomePageTemplate/assets/img/team-2.jpg')}}" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <h4>Sarah Jhonson</h4>
-                                    <span>Product Manager</span>
-                                    <div class="social">
-                                        <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="300">
-                        <div class="member">
-                            <img src="{{asset('HomePageTemplate/assets/img/team-3.jpg')}}" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <h4>William Anderson</h4>
-                                    <span>CTO</span>
-                                    <div class="social">
-                                        <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="400">
-                        <div class="member">
-                            <img src="{{asset('HomePageTemplate/assets/img/team-4.jpg')}}" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <h4>Amanda Jepson</h4>
-                                    <span>Accountant</span>
-                                    <div class="social">
-                                        <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
 
                 </div>
 
             </div>
         </section><!-- End Team Section -->
 
-        <!-- ======= Clients Section ======= -->
-        <section id="clients" class="section-bg">
-
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-header">
-                    <h3>Our CLients</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dere santome nida.</p>
-                </div>
-
-                <div class="row g-0 clients-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="{{asset('HomePageTemplate/assets/img/clients/client-1.png')}}" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="{{asset('HomePageTemplate/assets/img/clients/client-2.png')}}" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="{{asset('HomePageTemplate/assets/img/clients/client-3.png')}}" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="{{asset('HomePageTemplate/assets/img/clients/client-4.png')}}" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="{{asset('HomePageTemplate/assets/img/clients/client-5.png')}}" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="{{asset('HomePageTemplate/assets/img/clients/client-6.png')}}" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="{{asset('HomePageTemplate/assets/img/clients/client-7.png')}}" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="{{asset('HomePageTemplate/assets/img/clients/client-8.png')}}" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section><!-- End Clients Section -->
 
         <!-- ======= Contact Section ======= -->
         <section id="contact">
-            <div class="container-fluid" data-aos="fade-up">
+            <div class="container-fluid " data-aos="fade-up">
 
                 <div class="section-header">
-                    <h3>Contact Us</h3>
+                    <h3>Contactez-nous</h3>
                 </div>
 
                 <div class="row">
@@ -736,15 +483,15 @@
                 <div class="row">
 
                     <div class="col-lg-4 col-md-6 footer-info">
-                        <h3>NewBiz</h3>
+                        <h3>Garage V.Parrot</h3>
                         <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
                     </div>
 
                     <div class="col-lg-2 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#">À propos de nous</a></li>
                             <li><a href="#">Services</a></li>
                             <li><a href="#">Terms of service</a></li>
                             <li><a href="#">Privacy policy</a></li>
@@ -752,7 +499,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-contact">
-                        <h4>Contact Us</h4>
+                        <h4>Contactez-nous</h4>
                         <p>
                             A108 Adam Street <br>
                             New York, NY 535022<br>
@@ -785,17 +532,9 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong>NewBiz</strong>. All Rights Reserved
+                &copy; Copyright <strong>Garage V.Parrot</strong>. Tous les droits sont réservés
             </div>
-            <div class="credits">
-                <!--
-        All the links in the footer should remain intact.
-        You can delete the links only if you purchased the pro version.
-        Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
-      -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
+
         </div>
     </footer><!-- End Footer -->
 
@@ -830,5 +569,18 @@
     .card .content {
         flex: 1 0 auto;
         padding: 20px;
+    }
+
+    .user-image {
+        width: 300px;
+        /* Adjust the width as per your requirement */
+        height: 200px;
+        /* Adjust the height as per your requirement */
+    }
+
+    .large-image {
+        width: 80%;
+        height: auto;
+
     }
 </style>

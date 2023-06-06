@@ -133,7 +133,7 @@ class EmployeeController extends Controller
             'password' => 'required|min:6|max:25',
             'gender' => 'required',
             'address' => 'required',
-            'phone_number' => 'required|digits:8',
+            'phone_number' => 'required',
             'image' => 'required|mimes:jpeg,jpg,png',
             'role_id' => 'required'
 
@@ -148,7 +148,7 @@ class EmployeeController extends Controller
             'email' => 'required|unique:users,email,' . $id,
             'gender' => 'required',
             'address' => 'required',
-            'phone_number' => 'required|digits:8',
+            'phone_number' => 'required',
             'image' => 'mimes:jpeg,jpg,png',
             'role_id' => 'required'
 

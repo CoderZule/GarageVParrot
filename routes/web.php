@@ -25,4 +25,5 @@ Auth::routes();
 Route::group(['middleware' => ['auth', 'Admin']], function () {
     Route::resource('employee', 'EmployeeController');
     Route::resource('service', 'ServiceController');
+    Route::resource('opening-hours', 'OpeningHoursController');
 });

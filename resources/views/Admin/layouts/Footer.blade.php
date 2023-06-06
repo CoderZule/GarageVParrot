@@ -64,8 +64,6 @@
 <script src="{{asset('DashboardTemplate/js/demo/datatables-demo.js')}}"></script>
 
 
-
-
 </body>
 
 </html>

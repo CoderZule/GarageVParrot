@@ -397,7 +397,7 @@ h6 {
 #hero .hero-info h2 {
   color: #fff;
   margin-bottom: 40px;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
 }
 
@@ -1178,6 +1178,7 @@ section {
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
   padding: 60px 0;
   overflow: hidden;
+  background: #ecf5ff;
 }
 
 #contact .section-header {
