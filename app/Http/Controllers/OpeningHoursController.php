@@ -47,9 +47,6 @@ class OpeningHoursController extends Controller
 
         $dayName = $validatedData['day'];
         $day = Day::where('name', $dayName)->first();
-        if (!$day) {
-            return redirect()->back()->with('error', "Le jour sélectionné n'existe pas.");
-        }
 
         $existingOpeningHours = OpeningHours::where('day_id', $day->id)->first();
         if ($existingOpeningHours) {
@@ -94,7 +91,7 @@ class OpeningHoursController extends Controller
         }
 
         // Combine the morning and afternoon time values
-        $time = null;
+        $time = 'Fermé';
         if (!empty($morningTime) && !empty($afternoonTime)) {
             $time = $morningTime . ', ' . $afternoonTime;
         } elseif (!empty($morningTime)) {
@@ -133,7 +130,8 @@ class OpeningHoursController extends Controller
      */
     public function edit($id)
     {
-        //
+        $openingHour = OpeningHours::find($id);
+        return view('admin.openingHours.edit', compact('openingHour'));
     }
 
     /**
@@ -145,7 +143,70 @@ class OpeningHoursController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Validate the form input
+        $validatedData = $request->validate([
+            'time_morning' => 'nullable|array',
+            'time_afternoon' => 'nullable|array',
+        ]);
+
+        // Find the opening hour record
+        $openingHour = OpeningHours::find($id);
+        if (!$openingHour) {
+            return redirect()->back()->with('error', 'Les heures d\'ouverture spécifiées n\'existent pas.');
+        }
+
+        // Combine the selected morning and afternoon time slots
+        $timeMorning = Arr::get($validatedData, 'time_morning', []);
+        $timeAfternoon = Arr::get($validatedData, 'time_afternoon', []);
+
+        // Check if there is only one selected time slot for either morning or afternoon
+        if ((count($timeMorning) == 1) || (count($timeAfternoon) == 1)) {
+            return redirect()->back()->with('error', "Veuillez sélectionner plus d'une plage horaire pour le matin ou l'après-midi.");
+        }
+
+        // Separate morning and afternoon time slots
+        $morningTimeSlots = [];
+        $afternoonTimeSlots = [];
+
+        foreach ($timeMorning as $time) {
+            $morningTimeSlots[] = $time;
+        }
+
+        foreach ($timeAfternoon as $time) {
+            $afternoonTimeSlots[] = $time;
+        }
+
+        // Generate the time value for morning time slots
+        $morningTime = '';
+        if (!empty($morningTimeSlots)) {
+            $morningStart = reset($morningTimeSlots);
+            $morningEnd = end($morningTimeSlots);
+            $morningTime = $morningStart . ' - ' . $morningEnd;
+        }
+
+        // Generate the time value for afternoon time slots
+        $afternoonTime = '';
+        if (!empty($afternoonTimeSlots)) {
+            $afternoonStart = reset($afternoonTimeSlots);
+            $afternoonEnd = end($afternoonTimeSlots);
+            $afternoonTime = $afternoonStart . ' - ' . $afternoonEnd;
+        }
+
+        // Combine the morning and afternoon time values
+        $time = 'Fermé';
+        if (!empty($morningTime) && !empty($afternoonTime)) {
+            $time = $morningTime . ', ' . $afternoonTime;
+        } elseif (!empty($morningTime)) {
+            $time = $morningTime;
+        } elseif (!empty($afternoonTime)) {
+            $time = $afternoonTime;
+        }
+
+        // Update the opening hours record
+        $openingHour->time = $time;
+        $openingHour->save();
+
+        return redirect()->back()->with('message', "Heures d'ouverture mises à jour avec succès !");
     }
 
     /**

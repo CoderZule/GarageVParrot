@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\OpeningHours;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Service;
@@ -14,6 +15,8 @@ class HomeController extends Controller
     {
         $services = Service::all();
         $users = User::all();
-        return view('home', compact('services', 'users'));
+        $openingHours = OpeningHours::orderBy('day_id')->get();
+
+        return view('home', compact('services', 'users', 'openingHours'));
     }
 }

@@ -124,8 +124,8 @@
                                     <tr>
                                         <th scope="row">8</th>
                                         <td><input type="checkbox" name="time_afternoon[]" value="15:00">15:00</td>
-                                        <td><input type="checkbox" name="time_afternoon[]" value="15.20">15.20</td>
-                                        <td><input type="checkbox" name="time_afternoon[]" value="15.40">15.40</td>
+                                        <td><input type="checkbox" name="time_afternoon[]" value="15:20">15:20</td>
+                                        <td><input type="checkbox" name="time_afternoon[]" value="15:40">15:40</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">9</th>
@@ -153,7 +153,7 @@
                     </div>
                     <div class="card">
                         <div class="card-body">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Créer</button>
                         </div>
                     </div>
                 </form>
