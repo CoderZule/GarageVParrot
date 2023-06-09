@@ -63,7 +63,8 @@
 <!-- Page level custom scripts -->
 <script src="{{asset('DashboardTemplate/js/demo/datatables-demo.js')}}"></script>
 
-
+</div>
+</div>
 </body>
 
 </html>

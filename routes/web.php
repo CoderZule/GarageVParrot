@@ -27,3 +27,7 @@ Route::group(['middleware' => ['auth', 'Admin']], function () {
     Route::resource('service', 'ServiceController');
     Route::resource('opening-hours', 'OpeningHoursController');
 });
+
+Route::group(['middleware' => ['auth', 'Employee']], function () {
+    Route::resource('vehicle', 'VehicleController');
+});

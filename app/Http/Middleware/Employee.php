@@ -17,7 +17,7 @@ class Employee
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user()->role->name = "Employee") {
+        if (Auth::user()->role->name = "Employé") {
             return $next($request);
         }
     }
