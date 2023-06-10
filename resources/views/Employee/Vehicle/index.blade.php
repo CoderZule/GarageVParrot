@@ -37,6 +37,8 @@
                                 <th>Kilométrage</th>
                                 <th>Carburant</th>
                                 <th>Boîte de vitesse</th>
+                                <th>Prix</th>
+
                                 <th></th>
                             </tr>
                         </thead>
@@ -52,6 +54,7 @@
                                 <td>{{$vehicle->mileage}} KM</td>
                                 <td>{{$vehicle->energy}}</td>
                                 <td>{{$vehicle->gearbox}}</td>
+                                <td>{{$vehicle->price}} €</td>
                                 <td>
                                     <div class="table-actions">
 

@@ -1,3 +1,7 @@
 @include('home_layouts.header')
-@include('home_layouts.content')
+<div class="main-content">
+
+    @yield('content')
+</div>
+
 @include('home_layouts.footer')
