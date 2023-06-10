@@ -107,7 +107,7 @@
 
                         <div class="col-lg-6">
                             <label for="">Kilométrage</label>
-                            <input type="text" name="mileage" class="form-control @error('mileage') is-invalid @enderror" placeholder="Kilométrage" value="{{old('mileage')}}">
+                            <input type="number" name="mileage" class="form-control @error('mileage') is-invalid @enderror" placeholder="Kilométrage" value="{{old('mileage')}}">
                             @error('mileage')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -144,7 +144,7 @@
                         </div>
 
                         <div class="col-lg-6">
-                            <label for="">Équipements</label>
+                            <label for="">Liste des équipements</label>
                             <equipment></equipment>
 
                         </div>
@@ -155,7 +155,7 @@
 
                     <div class="row mt-3">
                         <div class="col-lg-6">
-                            <label for="">Image</label>
+                            <label for="">Galerie d'images</label>
                             <image-comp></image-comp>
 
 

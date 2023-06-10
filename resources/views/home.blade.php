@@ -156,143 +156,50 @@
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-lg-12">
                         <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-card">Card</li>
-                            <li data-filter=".filter-web">Web</li>
+                            <li data-filter=".filter-app">Kilométrage
+                                <input type="range" class="form-range" id="customRange1">
+                            </li>
+                            <li data-filter=".filter-app">Prix
+                                <input type="range" class="form-range" id="customRange2">
+                            </li>
+                            <li data-filter=".filter-app">Années
+                                <input type="range" class="form-range" id="customRange3">
+                            </li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="{{asset('HomePageTemplate/assets/img/portfolio/app1.jpg')}}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="portfolio-details.html">App 1</a></h4>
-                                <p>App</p>
-                                <div>
-                                    <a href="{{asset('HomePageTemplate/assets/img/portfolio/app1.jpg')}}" data-gallery="portfolioGallery" title="App 1" class="portfolio-lightbox link-preview"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="{{asset('HomePageTemplate/assets/img/portfolio/web3.jpg')}}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="portfolio-details.html">Web 3</a></h4>
-                                <p>Web</p>
-                                <div>
-                                    <a href="{{asset('HomePageTemplate/assets/img/portfolio/web3.jpg')}}" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Web 3"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @foreach ($vehicles as $vehicle)
+                    @php
+                    $images = explode(',', $vehicle->image); // Split the image column by comma
+                    $firstImage = trim($images[0]); // Get the first image
+                    @endphp
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="{{asset('HomePageTemplate/assets/img/portfolio/app2.jpg')}}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="portfolio-details.html">App 2</a></h4>
-                                <p>App</p>
-                                <div>
-                                    <a href="{{asset('HomePageTemplate/assets/img/portfolio/app2.jpg')}}" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="App 2"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                            <div class="price-tag">{{ $vehicle->price }} €</div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="{{asset('HomePageTemplate/assets/img/portfolio/card2.jpg')}}" class="img-fluid" alt="">
+                            <img src="{{ asset('vehicles_images/'. $firstImage) }}" class="img-fluid" alt="">
                             <div class="portfolio-info">
-                                <h4><a href="portfolio-details.html">Card 2</a></h4>
-                                <p>Card</p>
-                                <div>
-                                    <a href="{{asset('HomePageTemplate/assets/img/portfolio/card2.jpg')}}" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Card 2"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                <h4><a href="portfolio-details.html">Détails</a></h4>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="{{asset('HomePageTemplate/assets/img/portfolio/web2.jpg')}}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="portfolio-details.html">Web 2</a></h4>
-                                <p>Web</p>
-                                <div>
-                                    <a href="{{asset('HomePageTemplate/assets/img/portfolio/web2.jpg')}}" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Web 2"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="{{asset('HomePageTemplate/assets/img/portfolio/app3.jpg')}}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="portfolio-details.html">App 3</a></h4>
-                                <p>App</p>
-                                <div>
-                                    <a href="{{asset('HomePageTemplate/assets/img/portfolio/app3.jpg')}}" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="App 3"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                    @endforeach
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="{{asset('HomePageTemplate/assets/img/portfolio/card1.jpg')}}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="portfolio-details.html">Card 1</a></h4>
-                                <p>Card</p>
-                                <div>
-                                    <a href="{{asset('HomePageTemplate/assets/img/portfolio/card1.jpg')}}" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Card 1"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="{{asset('HomePageTemplate/assets/img/portfolio/card3.jpg')}}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="portfolio-details.html">Card 3</a></h4>
-                                <p>Card</p>
-                                <div>
-                                    <a href="{{asset('HomePageTemplate/assets/img/portfolio/card3.jpg')}}" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Card 3"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="{{asset('HomePageTemplate/assets/img/portfolio/web1.jpg')}}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="portfolio-details.html">Web 1</a></h4>
-                                <p>Web</p>
-                                <div>
-                                    <a href="{{asset('HomePageTemplate/assets/img/portfolio/web1.jpg')}}" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Web 1"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
+            </div>
+
+
+
+
+            </div>
 
             </div>
         </section><!-- End Portfolio Section -->
@@ -612,5 +519,18 @@
     .opening-hours span {
         font-weight: bold;
         margin-right: 10px;
+    }
+
+    .price-tag {
+        position: absolute;
+        top: 10px;
+        /* Adjust the top position as needed */
+        left: 10px;
+        /* Adjust the left position as needed */
+        background-color: #000;
+        color: #fff;
+        padding: 5px 10px;
+        font-size: 14px;
+        border-radius: 5px;
     }
 </style>

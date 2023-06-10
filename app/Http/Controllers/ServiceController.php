@@ -101,9 +101,7 @@ class ServiceController extends Controller
      */
     public function destroy($id)
     {
-        if (auth()->user()->id == $id) {
-            abort(401);
-        }
+
         $service = Service::find($id);
         $serviceDelete = $service->delete();
         if ($serviceDelete) {

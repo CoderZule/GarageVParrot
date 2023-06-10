@@ -32,6 +32,11 @@
                             <tr>
                                 <th>Marque</th>
                                 <th>Modéle</th>
+                                <th>Mise en circulation</th>
+                                <th>Puissance fiscale</th>
+                                <th>Kilométrage</th>
+                                <th>Carburant</th>
+                                <th>Boîte de vitesse</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -41,19 +46,32 @@
                             @foreach($vehicles as $vehicle)
                             <tr>
                                 <td>{{$vehicle->brand}}</td>
-                                <td>{{$vehicle->description}}</td>
+                                <td>{{$vehicle->model}}</td>
+                                <td>{{$vehicle->releaseYear}}</td>
+                                <td>{{$vehicle->fiscalPower}}</td>
+                                <td>{{$vehicle->mileage}} KM</td>
+                                <td>{{$vehicle->energy}}</td>
+                                <td>{{$vehicle->gearbox}}</td>
                                 <td>
                                     <div class="table-actions">
 
+                                        <a href="#" data-toggle="modal" data-target="#exampleModal{{$vehicle->id}}">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+
                                         <a href="{{route('vehicle.edit',[$vehicle->id])}}"><i class="fas fa-edit" style="color: #fbb042;"></i></a>
 
-
+                                        <a href="{{route('vehicle.show',[$vehicle->id])}}">
+                                            <i class="fas fa-trash" style="color: red;"></i>
+                                        </a>
 
                                     </div>
                                 </td>
 
 
                             </tr>
+                            <!-- View Modal -->
+                            @include('employee.vehicle.modal')
 
                             @endforeach
 

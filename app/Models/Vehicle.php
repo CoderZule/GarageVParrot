@@ -13,13 +13,4 @@ class Vehicle extends Model
         'price', 'releaseYear', 'energy', 'mileage',
         'gearbox', 'description', 'image'
     ];
-
-    public function vehicleIMG($request)
-    {
-        $image = $request->file('image');
-        $name = $image->hashName();
-        $destination = public_path('/vehicles_images');
-        $image->move($destination, $name);
-        return $name;
-    }
 }

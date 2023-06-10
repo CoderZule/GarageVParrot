@@ -62,7 +62,7 @@
 
                     <button type="submit" class="btn btn-primary mr-2 mt-4">Modifier</button>
 
-                    <a href="" class="btn btn-secondary mt-4">
+                    <a href="{{route('service.index')}}" class="btn btn-secondary mt-4">
                         Annuler
 
                     </a>
