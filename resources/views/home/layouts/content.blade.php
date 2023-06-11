@@ -92,14 +92,23 @@
             <div class="row" data-aos="fade-up" data-aos-delay="100">
                 <div class="col-lg-12">
                     <ul id="portfolio-flters">
-                        <li data-filter=".filter-app">Kilométrage
-                            <input type="range" class="form-range" id="customRange1">
+                        <li data-filter=".filter-app">
+                            Kilométrage
+                            <input type="range" class="form-range" id="customRange1" min="50000" max="160000" value="50000" step="1000">
+                            <span id="startMileage">50000</span>Km&nbsp;&nbsp;&nbsp;-
+                            <span id="endMileage">160000</span>Km
                         </li>
-                        <li data-filter=".filter-app">Prix
-                            <input type="range" class="form-range" id="customRange2">
+                        <li data-filter=".filter-app">
+                            Prix
+                            <input type="range" class="form-range" id="customRange2" min="5000" max="40000" value="5000" step="1000">
+                            <span id="startPrice">5,000</span>€&nbsp;&nbsp;&nbsp;-
+                            <span id="endPrice">40,000</span>€
                         </li>
-                        <li data-filter=".filter-app">Années
-                            <input type="range" class="form-range" id="customRange3">
+                        <li data-filter=".filter-app">
+                            Années
+                            <input type="range" class="form-range" id="customRange3" min="2001" max="2022" value="2001" step="1">
+                            <span id="startYear">2001</span>&nbsp;&nbsp;&nbsp;-
+                            <span id="endYear">2022</span>
                         </li>
                     </ul>
                 </div>
@@ -113,7 +122,7 @@
                 $firstImage = trim($images[0]); // Get the first image
                 @endphp
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-price="{{ $vehicle->price }}" data-mileage="{{ $vehicle->mileage }}" data-year="{{ $vehicle->releaseYear }}">
                     <div class="portfolio-wrap">
                         <div class="price-tag">{{ $vehicle->price }} €</div>
 
@@ -122,11 +131,8 @@
                             <h4>
                                 <a href="" data-toggle="modal" data-target="#carModal{{ $vehicle->id }}">Détails</a>
                             </h4>
-
                         </div>
-
                     </div>
-
                 </div>
 
 
@@ -137,6 +143,8 @@
 
 
             </div>
+
+
         </div>
 
 
@@ -325,3 +333,74 @@
     </section><!-- End Contact Section -->
 
 </main><!-- End #main -->
+<style>
+    #startMileage,
+    #endMileage,
+    #startPrice,
+    #endPrice,
+    #startYear,
+    #endYear {
+        margin-left: 10px;
+        font-weight: bold;
+    }
+</style>
+
+<script>
+    const mileageInput = document.getElementById('customRange1');
+    const startMileage = document.getElementById('startMileage');
+    const endMileage = document.getElementById('endMileage');
+
+    mileageInput.addEventListener('input', function() {
+        const value = mileageInput.value;
+        startMileage.textContent = value;
+        filterVehicles();
+    });
+
+    const priceInput = document.getElementById('customRange2');
+    const startPrice = document.getElementById('startPrice');
+    const endPrice = document.getElementById('endPrice');
+
+    priceInput.addEventListener('input', function() {
+        const value = priceInput.value;
+        startPrice.textContent = numberWithCommas(value);
+        filterVehicles();
+    });
+
+    const yearInput = document.getElementById('customRange3');
+    const startYear = document.getElementById('startYear');
+    const endYear = document.getElementById('endYear');
+
+    yearInput.addEventListener('input', function() {
+        const value = yearInput.value;
+        startYear.textContent = value;
+        filterVehicles();
+    });
+
+    function numberWithCommas(number) {
+        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    function filterVehicles() {
+        const priceValue = parseInt(priceInput.value.replace('.', ''));
+        const mileageValue = parseInt(mileageInput.value.replace('.', ''));
+        const yearValue = parseInt(yearInput.value);
+
+        const vehicles = document.querySelectorAll('.portfolio-item');
+
+        vehicles.forEach(vehicle => {
+            const vehiclePrice = parseInt(vehicle.getAttribute('data-price').replace('.', ''));
+            const vehicleMileage = parseInt(vehicle.getAttribute('data-mileage'));
+            const vehicleYear = parseInt(vehicle.getAttribute('data-year'));
+
+            if (
+                vehiclePrice >= priceValue &&
+                vehicleMileage >= mileageValue &&
+                vehicleYear >= yearValue
+            ) {
+                vehicle.style.display = 'block';
+            } else {
+                vehicle.style.display = 'none';
+            }
+        });
+    }
+</script>

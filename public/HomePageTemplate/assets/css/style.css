@@ -798,16 +798,11 @@ section {
   color: #007bff;
   border-radius: 50px;
   text-transform: uppercase;
-  background: #ecf5ff;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
 
-#portfolio #portfolio-flters li:hover,
-#portfolio #portfolio-flters li.filter-active {
-  background: #007bff;
-  color: #fff;
-}
+
 
 #portfolio #portfolio-flters li:last-child {
   margin-right: 0;
