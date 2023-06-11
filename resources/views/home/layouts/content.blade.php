@@ -119,13 +119,19 @@
 
                         <img src="{{ asset('vehicles_images/'. $firstImage) }}" class="img-fluid" alt="">
                         <div class="portfolio-info">
-                            <h4><a href="" data-toggle="modal" data-target="#carModal{{ $vehicle->id }}">Détails</a></h4>
+                            <h4>
+                                <a href="" data-toggle="modal" data-target="#carModal{{ $vehicle->id }}">Détails</a>
+                            </h4>
 
                         </div>
 
                     </div>
 
                 </div>
+
+
+                <!-- View Modal -->
+                @include('home.details')
                 @endforeach
 
 
@@ -319,6 +325,3 @@
     </section><!-- End Contact Section -->
 
 </main><!-- End #main -->
-
-<!-- View Modal -->
-@include('home.details')
