@@ -321,4 +321,4 @@
 </main><!-- End #main -->
 
 <!-- View Modal -->
-@include('home_layouts.details')
+@include('home.details')

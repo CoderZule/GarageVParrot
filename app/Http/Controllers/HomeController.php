@@ -19,6 +19,6 @@ class HomeController extends Controller
         $openingHours = OpeningHours::orderBy('day_id')->get();
         $vehicles = Vehicle::all();
 
-        return view('home', compact('services', 'users', 'openingHours', 'vehicles'));
+        return view('home.home', compact('services', 'users', 'openingHours', 'vehicles'));
     }
 }
