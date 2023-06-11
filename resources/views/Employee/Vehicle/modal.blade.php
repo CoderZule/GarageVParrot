@@ -32,11 +32,9 @@
                 </div>
                 <br>
                 <p>
-                    <b>Marque: </b>{{$vehicle->brand}}
+                    <b>Marque et Modéle: </b>{{$vehicle->brand}} {{$vehicle->model}}
                 </p>
-                <p>
-                    <b>Modéle: </b>{{$vehicle->model}}
-                </p>
+
                 <p>
                     <b>Description: </b>{{$vehicle->description}}
                 </p>

@@ -80,6 +80,9 @@
 <script src="{{asset('HomePageTemplate/assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
 <script src="{{asset('HomePageTemplate/assets/vendor/php-email-form/validate.js')}}"></script>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <!-- HomePageTemplate Main JS File -->
 <script src="{{asset('HomePageTemplate/assets/js/main.js')}}"></script>
 
@@ -147,5 +150,11 @@
         padding: 5px 10px;
         font-size: 14px;
         border-radius: 5px;
+    }
+
+    .car-info {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 10px;
     }
 </style>
