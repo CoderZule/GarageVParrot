@@ -128,21 +128,18 @@
 
                         <img src="{{ asset('vehicles_images/'. $firstImage) }}" class="img-fluid" alt="">
                         <div class="portfolio-info">
-                            <h4>
-                                <a href="" data-toggle="modal" data-target="#carModal{{ $vehicle->id }}">Détails</a>
-                            </h4>
+                            <h4><a href="{{ route('vehicle.details', ['id' => $vehicle->id]) }}">Détails</a></h4>
+
                         </div>
                     </div>
+
                 </div>
-
-
-                <!-- View Modal -->
-                @include('home.details')
                 @endforeach
 
 
 
             </div>
+
 
 
         </div>
@@ -155,8 +152,43 @@
         </div>
     </section><!-- End Portfolio Section -->
 
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="section-bg">
+        <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <h3>Équipe
+                </h3>
+                <p>Notre équipe est composée de professionnels de l'automobile chevronnés et passionnés, dévoués à leur métier</p>
+            </div>
+
+            <div class="row">
+
+                @foreach($users as $user)
+                <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="100">
+                    <div class="member">
+                        <img src="{{ asset('employee_admin_images/' . $user->image) }}" class="img-fluid user-image" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>{{ $user->name }}</h4>
+                                <span>{{ $user->role->name }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+
+
+
+
+
+            </div>
+
+        </div>
+    </section><!-- End Team Section -->
+
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="section-bg">
+    <section id="testimonials">
         <div class="container" data-aso="zoom-in">
 
             <header class="section-header">
@@ -234,103 +266,8 @@
         </div>
     </section><!-- End Testimonials Section -->
 
-    <!-- ======= Team Section ======= -->
-    <section id="team">
-        <div class="container" data-aos="fade-up">
-            <div class="section-header">
-                <h3>Équipe
-                </h3>
-                <p>Notre équipe est composée de professionnels de l'automobile chevronnés et passionnés, dévoués à leur métier</p>
-            </div>
-
-            <div class="row">
-
-                @foreach($users as $user)
-                <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="100">
-                    <div class="member">
-                        <img src="{{ asset('employee_admin_images/' . $user->image) }}" class="img-fluid user-image" alt="">
-                        <div class="member-info">
-                            <div class="member-info-content">
-                                <h4>{{ $user->name }}</h4>
-                                <span>{{ $user->role->name }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-
-
-
-
-
-            </div>
-
-        </div>
-    </section><!-- End Team Section -->
-
-
     <!-- ======= Contact Section ======= -->
-    <section id="contact">
-        <div class="container-fluid " data-aos="fade-up">
-
-            <div class="section-header">
-                <h3>Contactez-nous</h3>
-            </div>
-
-            <div class="row">
-
-                <div class="col-lg-6">
-                    <div class="map mb-4 mb-lg-0">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 340px;" allowfullscreen></iframe>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-md-5 info">
-                            <i class="bi bi-geo-alt"></i>
-                            <p>A108 Adam Street, NY 535022</p>
-                        </div>
-                        <div class="col-md-4 info">
-                            <i class="bi bi-envelope"></i>
-                            <p>info@example.com</p>
-                        </div>
-                        <div class="col-md-3 info">
-                            <i class="bi bi-phone"></i>
-                            <p>+1 5589 55488 55</p>
-                        </div>
-                    </div>
-
-                    <div class="form">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                            <div class="row">
-                                <div class="form-group col-lg-6">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                                </div>
-                                <div class="form-group col-lg-6 mt-3 mt-lg-0">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                                </div>
-                            </div>
-                            <div class="form-group mt-3">
-                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                            </div>
-                            <div class="form-group mt-3">
-                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                            </div>
-                            <div class="my-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                            </div>
-                            <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section><!-- End Contact Section -->
+    <!-- End Contact Section -->
 
 </main><!-- End #main -->
 <style>

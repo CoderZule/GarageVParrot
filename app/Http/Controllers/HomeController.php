@@ -21,4 +21,11 @@ class HomeController extends Controller
 
         return view('home.home', compact('services', 'users', 'openingHours', 'vehicles'));
     }
+
+    public function details($id)
+    {
+        $vehicle = Vehicle::find($id);
+        $openingHours = OpeningHours::orderBy('day_id')->get();
+        return view('home.details', compact('vehicle', 'openingHours'));
+    }
 }

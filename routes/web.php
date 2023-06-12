@@ -19,6 +19,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::get('/dashboard', 'DashboardController@index');
 
+Route::post('/send', 'ContactController@sendEmail')->name('contact.send');
+
 Auth::routes();
 
 
@@ -31,3 +33,6 @@ Route::group(['middleware' => ['auth', 'Admin']], function () {
 Route::group(['middleware' => ['auth', 'Employee']], function () {
     Route::resource('vehicle', 'VehicleController');
 });
+
+
+Route::get('/details/{id}', 'HomeController@details')->name('vehicle.details');

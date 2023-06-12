@@ -26,13 +26,6 @@
     <!-- HomePageTemplate Main CSS File -->
     <link href="{{asset('HomePageTemplate/assets/css/style.css')}}" rel="stylesheet">
 
-    <!-- =======================================================
-  * HomePageTemplate Name: Garage V.Parrot
-  * Updated: May 30 2023 with Bootstrap v5.3.0
-  * HomePageTemplate URL: https://bootstrapmade.com/Garage V.Parrot-bootstrap-business-HomePageTemplate/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -42,9 +35,8 @@
         <div class="container d-flex justify-content-between">
 
             <div class="logo">
-                <!-- Uncomment below if you prefer to use an text logo -->
-                <!-- <h1><a href="index.html">Garage V.Parrot</a></h1> -->
-                <a href="index.html"><img src="{{asset('HomePageTemplate/assets/img/logo.jpg')}}" alt="" class="img-fluid"></a>
+
+                <img src="{{asset('HomePageTemplate/assets/img/logo.jpg')}}" alt="" class="img-fluid">
             </div>
 
             <nav id="navbar" class="navbar">
@@ -54,7 +46,7 @@
                     <li><a class="nav-link scrollto" href="#services">Services</a></li>
                     <li><a class="nav-link scrollto " href="#portfolio">Véhicules d’occasion</a></li>
                     <li><a class="nav-link scrollto" href="#team">Équipe</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
