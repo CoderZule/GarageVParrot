@@ -190,14 +190,8 @@
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials">
         <div class="container" data-aso="zoom-in">
-
-            <header class="section-header">
-                <h3>Témoignages</h3>
-            </header>
-
-            <div class="row justify-content-center">
+            <div class="row">
                 <div class="col-lg-8">
-
                     <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
 
@@ -261,6 +255,57 @@
                     </div>
 
                 </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-form">
+                        <h3>Témoignage</h3>
+                        <form action="{{ route('testimony.store') }}" method="POST">
+                            @csrf
+                            <div class="form-group">
+                                <label for="name">Nom</label>
+                                <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" required>
+                                @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="comment">Commentaire</label>
+                                <textarea name="comment" id="comment" class="form-control @error('comment') is-invalid @enderror" required></textarea>
+                                @error('comment')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="rating">Notation</label>
+                                <div class="rating">
+                                    <div class="stars" id="rating-stars">
+                                        <i class="bi bi-star" data-rating="1"></i>
+                                        <i class="bi bi-star" data-rating="2"></i>
+                                        <i class="bi bi-star" data-rating="3"></i>
+                                        <i class="bi bi-star" data-rating="4"></i>
+                                        <i class="bi bi-star" data-rating="5"></i>
+                                    </div>
+                                </div>
+                                <input type="hidden" class="form-control @error('rating') is-invalid @enderror" name="rating" id="rating-input" required>
+                                @error('rating')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            @if(Session::has('message'))
+                            <div class="alert bg-success alert-success text-white mt-3" role="alert">
+                                {{Session::get('message')}}
+                            </div>
+                            @endif
+
+                            <button type="submit" class="btn btn-primary mt-3">Soumettre</button>
+                        </form>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -279,6 +324,19 @@
     #endYear {
         margin-left: 10px;
         font-weight: bold;
+    }
+
+    /*rating */
+
+    .stars i {
+        color: #e6e6e6;
+        font-size: 30px;
+        cursor: pointer;
+        transition: color 0.2s ease;
+    }
+
+    .stars i.active {
+        color: #ff9c1a;
     }
 </style>
 
@@ -340,4 +398,27 @@
             }
         });
     }
+
+    //rating 
+
+    const stars = document.querySelectorAll(".stars i");
+    const ratingInput = document.getElementById("rating-input");
+
+    // Loop through the "stars" NodeList
+    stars.forEach((star, index1) => {
+        // Add an event listener that runs a function when the "click" event is triggered
+        star.addEventListener("click", () => {
+            // Loop through the "stars" NodeList Again
+            stars.forEach((star, index2) => {
+                // Add the "active" class to the clicked star and any stars with a lower index
+                // and remove the "active" class from any stars with a higher index
+                index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
+            });
+
+            // Set the rating input value based on the number of active stars
+            ratingInput.value = index1 + 1;
+        });
+    });
+</script>
+
 </script>

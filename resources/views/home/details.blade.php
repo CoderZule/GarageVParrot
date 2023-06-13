@@ -165,7 +165,7 @@
                                 </div>
 
                                 <div class="form-group col-lg-6 mt-3">
-                                    <input type="text" name="firstName" class="form-control  @error('firstName') is-invalid @enderror" id="firstName" placeholder="Votre nom">
+                                    <input type="text" name="firstName" class="form-control  @error('firstName') is-invalid @enderror" id="firstName" placeholder="Votre nom" required>
                                     @error('firstName')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -174,7 +174,7 @@
                                 </div>
 
                                 <div class="form-group col-lg-6 mt-3 ">
-                                    <input type="text" class="form-control @error('lastName') is-invalid @enderror " name="lastName" id="lastName" placeholder="Votre prénom">
+                                    <input type="text" class="form-control @error('lastName') is-invalid @enderror " name="lastName" id="lastName" placeholder="Votre prénom" required>
                                     @error('lastName')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -185,7 +185,7 @@
                             <div class="row mt-3">
 
                                 <div class="form-group col-lg-6 mt-3">
-                                    <input type="email" class="form-control  @error('email') is-invalid @enderror" name="email" id="email" placeholder="Votre adresse e-mail">
+                                    <input type="email" class="form-control  @error('email') is-invalid @enderror" name="email" id="email" placeholder="Votre adresse e-mail" required>
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -193,7 +193,7 @@
                                     @enderror
                                 </div>
                                 <div class="form-group col-lg-6 mt-3">
-                                    <input type="text" name="tel" class="form-control @error('tel') is-invalid @enderror" id="tel" placeholder="Votre numéro de téléphone">
+                                    <input type="text" name="tel" class="form-control @error('tel') is-invalid @enderror" id="tel" placeholder="Votre numéro de téléphone" required>
                                     @error('tel')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -203,7 +203,7 @@
                             </div>
 
                             <div class="form-group mt-3">
-                                <textarea class="form-control @error('Message') is-invalid @enderror" name="Message" rows="5" placeholder="Message"></textarea>
+                                <textarea class="form-control @error('Message') is-invalid @enderror" name="Message" rows="5" placeholder="Message" required></textarea>
                                 @error('Message')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
