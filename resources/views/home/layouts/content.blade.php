@@ -58,6 +58,7 @@
             </header>
 
             <div class="row justify-content-center" style="display: flex; flex-wrap: wrap; margin-top: 20px;">
+                @if(count($services) > 0)
                 @foreach ($services as $service)
                 <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="100" style="display: flex;">
                     <div class="card" style="display: flex; flex-direction: column; height: 100%;">
@@ -71,6 +72,12 @@
                     </div>
                 </div>
                 @endforeach
+
+                @else
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="100" style="display: flex;">
+                    <p>Aucun service disponible.</p>
+                </div>
+                @endif
             </div>
 
 
@@ -116,6 +123,7 @@
 
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
+                @if(count($vehicles) > 0)
                 @foreach ($vehicles as $vehicle)
                 @php
                 $images = explode(',', $vehicle->image); // Split the image column by comma
@@ -135,6 +143,13 @@
 
                 </div>
                 @endforeach
+
+                @else
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <p>Aucun véhicule disponible.</p>
+                </div>
+                @endif
+
 
 
 
@@ -164,6 +179,8 @@
 
             <div class="row">
 
+                @if(count($users) > 0)
+
                 @foreach($users as $user)
                 <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="100">
                     <div class="member">
@@ -177,6 +194,11 @@
                     </div>
                 </div>
                 @endforeach
+                @else
+                <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="100">
+                    <p>aucun membre de l'équipe disponible.</p>
+                </div>
+                @endif
 
 
 
@@ -194,61 +216,47 @@
                 <div class="col-lg-8">
                     <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
+                            @if (count($testimonies) > 0)
+                            @php
+                            $approvedTestimonies = $testimonies->where('approved', 1);
+                            @endphp
 
+                            @if ($approvedTestimonies->count() > 0)
+                            @foreach ($approvedTestimonies as $testimony)
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img src="{{asset('HomePageTemplate/assets/img/testimonial-1.jpg')}}" class="testimonial-img" alt="">
-                                    <h3>Saul Goodman</h3>
-                                    <h4>Ceo &amp; Founder</h4>
+                                    <img src="https://cdn3.iconfinder.com/data/icons/galaxy-open-line-gradient-i/200/contacts-512.png" class="testimonial-img" alt="">
+                                    <h3>{{ $testimony->name }}</h3>
+                                    <div class="starsr">
+                                        <h4>
+                                            @for ($i = 1; $i <= 5; $i++) @if ($i <=$testimony->rating)
+                                                <i class="bi bi-star active"></i>
+                                                @else
+                                                <i class="bi bi-star"></i>
+                                                @endif
+                                                @endfor
+                                        </h4>
+                                    </div>
                                     <p>
-                                        Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                                        {{ $testimony->comment }}
                                     </p>
                                 </div>
-                            </div><!-- End testimonial item -->
-
+                            </div>
+                            @endforeach
+                            @else
                             <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <img src="{{asset('HomePageTemplate/assets/img/testimonial-2.jpg')}}" class="testimonial-img" alt="">
-                                    <h3>Sara Wilsson</h3>
-                                    <h4>Designer</h4>
-                                    <p>
-                                        Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                                    </p>
-                                </div>
-                            </div><!-- End testimonial item -->
-
+                                <p>Aucun témoignage approuvé disponible.</p>
+                            </div>
+                            @endif
+                            @else
                             <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <img src="{{asset('HomePageTemplate/assets/img/testimonial-3.jpg')}}" class="testimonial-img" alt="">
-                                    <h3>Jena Karlis</h3>
-                                    <h4>Store Owner</h4>
-                                    <p>
-                                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                    </p>
-                                </div>
-                            </div><!-- End testimonial item -->
+                                <p>Aucun témoignage disponible.</p>
+                            </div>
+                            @endif
 
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <img src="{{asset('HomePageTemplate/assets/img/testimonial-4.jpg')}}" class="testimonial-img" alt="">
-                                    <h3>Matt Brandon</h3>
-                                    <h4>Freelancer</h4>
-                                    <p>
-                                        Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                                    </p>
-                                </div>
-                            </div><!-- End testimonial item -->
 
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <img src="{{asset('HomePageTemplate/assets/img/testimonial-5.jpg')}}" class="testimonial-img" alt="">
-                                    <h3>John Larson</h3>
-                                    <h4>Entrepreneur</h4>
-                                    <p>
-                                        Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                                    </p>
-                                </div>
-                            </div><!-- End testimonial item -->
+
+
 
                         </div>
                         <div class="swiper-pagination"></div>
@@ -278,8 +286,7 @@
                                 </span>
                                 @enderror
                             </div>
-                            <div class="form-group">
-                                <label for="rating">Notation</label>
+                            <div class="form-group mt-3 ">
                                 <div class="rating">
                                     <div class="stars" id="rating-stars">
                                         <i class="bi bi-star" data-rating="1"></i>
@@ -336,6 +343,15 @@
     }
 
     .stars i.active {
+        color: #ff9c1a;
+    }
+
+
+    .starsr i {
+        color: #e6e6e6;
+    }
+
+    .starsr i.active {
         color: #ff9c1a;
     }
 </style>

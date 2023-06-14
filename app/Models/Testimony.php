@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Testimony extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'comment', 'rating'];
+    protected $fillable = ['name', 'comment', 'rating', 'approved'];
 }

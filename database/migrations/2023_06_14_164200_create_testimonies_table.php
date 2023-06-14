@@ -18,6 +18,7 @@ class CreateTestimoniesTable extends Migration
             $table->string('name');
             $table->text('comment');
             $table->unsignedTinyInteger('rating')->default(0);
+            $table->boolean('approved')->default(false);
             $table->timestamps();
         });
     }

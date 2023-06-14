@@ -83,6 +83,19 @@
                         </div>
                     </div>
                 </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTestimony" aria-expanded="true" aria-controls="collapseTwo">
+                        <i class="far fa-grin-stars	"></i>
+                        <span>Témoignages</span>
+                    </a>
+                    <div id="collapseTestimony" class="collapse" aria-labelledby="headingVehicle" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="#">Liste</a>
+                        </div>
+                    </div>
+                </li>
                 @endif
 
 
