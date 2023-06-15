@@ -17,8 +17,9 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user()->role->name = "Admin") {
+        if (Auth::user()->role->name == "Admin") {
             return $next($request);
         }
+        return redirect('dashboard')->with('error', 'Accès non autorisé');
     }
 }
