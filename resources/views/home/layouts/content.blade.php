@@ -9,7 +9,7 @@
         <div class="hero-info" data-aos="zoom-in" data-aos-delay="100">
             <h2>Réparation et vente de véhicules d'occasion,<br><span> notre expertise</span><br> à votre service!</h2>
             <div>
-                <a href="/login" class="btn-get-started scrollto">Commancer</a>
+                <a href="/login" class="btn-get-started scrollto">Connexion (Équipe)</a>
                 <a href="#services" class="btn-services scrollto">Notre Services</a>
             </div>
         </div>
@@ -266,7 +266,7 @@
                 <div class="col-lg-4">
                     <div class="testimonial-form">
                         <h3>Témoignage</h3>
-                        <form action="{{ route('testimony.store') }}" method="POST">
+                        <form action="{{ route('testimonies.store') }}" method="POST">
                             @csrf
                             <div class="form-group">
                                 <label for="name">Nom</label>

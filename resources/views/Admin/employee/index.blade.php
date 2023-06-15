@@ -1,16 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('content')
-<style>
-    .table-user-thumb {
-        width: 40px;
-        /* Adjust the width to your desired size */
-        height: auto;
-        /* Maintain aspect ratio */
-        border-radius: 30%;
-        /* Make it circular */
-    }
-</style>
+
 
 
 <div class="row">
@@ -31,7 +22,6 @@
                         <thead>
                             <tr>
                                 <th>Nom et prénom</th>
-                                <th class="nosort">Avatar</th>
                                 <th>Adresse e-mail</th>
                                 <th>Numéro de téléphone</th>
                                 <th>Adresse</th>
@@ -44,7 +34,6 @@
                             @foreach($users as $user)
                             <tr>
                                 <td>{{$user->name}}</td>
-                                <td><img src="{{asset('employee_admin_images')}}/{{$user->image}}" class="table-user-thumb" alt=""></td>
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->phone_number}}</td>
                                 <td>{{$user->address}}</td>

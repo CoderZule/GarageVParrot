@@ -31,4 +31,23 @@ class HomeController extends Controller
         $openingHours = OpeningHours::orderBy('day_id')->get();
         return view('home.details', compact('vehicle', 'openingHours'));
     }
+
+    public function store(Request $request)
+    {
+        $this->validateStore($request);
+        $data = $request->all();
+
+        Testimony::create($data);
+        return redirect()->back()->with('message', 'Témoignage soumis avec succès !');
+    }
+
+    public function validateStore($request)
+    {
+        return $this->validate($request, [
+            'name' => 'required|regex:/^[\pL\s\-]+$/u',
+            'comment' => 'required',
+            'rating' => 'required|integer|min:1|max:5'
+
+        ]);
+    }
 }

@@ -20,7 +20,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'DashboardController@index');
 Route::post('/send', 'ContactController@sendEmail')->name('contact.send');
 Route::get('/details/{id}', 'HomeController@details')->name('vehicle.details');
-Route::post('/testimony', 'TestimonyController@store')->name('testimony.store');
+Route::post('/send-testimony', 'HomeController@store')->name('testimonies.store');
 
 
 Route::group(['middleware' => ['auth', 'Admin']], function () {
@@ -31,4 +31,6 @@ Route::group(['middleware' => ['auth', 'Admin']], function () {
 
 Route::group(['middleware' => ['auth', 'Employee']], function () {
     Route::resource('vehicle', 'VehicleController');
+    Route::resource('testimony', 'TestimonyController');
+    Route::put('/testimony/{id}/allow', 'TestimonyController@allow')->name('testimony.allow');
 });

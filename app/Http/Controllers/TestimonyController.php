@@ -14,7 +14,8 @@ class TestimonyController extends Controller
      */
     public function index()
     {
-        //
+        $testimonies = Testimony::all();
+        return view('employee.testimony.index', compact('testimonies'));
     }
 
     /**
@@ -35,11 +36,7 @@ class TestimonyController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validateStore($request);
-        $data = $request->all();
-
-        Testimony::create($data);
-        return redirect()->back()->with('message', 'Témoignage soumis avec succès !');
+        //
     }
 
     /**
@@ -87,16 +84,14 @@ class TestimonyController extends Controller
         //
     }
 
-    public function validateStore($request)
+
+
+    public function allow($id)
     {
-        return $this->validate($request, [
-            'name' => 'required|regex:/^[\pL\s\-]+$/u',
-            'comment' => 'required',
-            'rating' => 'required|integer|min:1|max:5'
+        $testimony = Testimony::findOrFail($id);
+        $testimony->approved = 1;
+        $testimony->save();
 
-
-
-
-        ]);
+        return redirect()->back()->with('message', 'Le témoignage est maintenant approuvé');
     }
 }
