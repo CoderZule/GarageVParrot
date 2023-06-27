@@ -1,19 +1,24 @@
 Voici la démarche à suivre pour exécuter l'application en local :
 
-1. Assurez-vous d'avoir PHP et Composer installés sur votre machine. Voici les étapes pour vérifier leur installation :
+# Heading 2 #
+ Assurez-vous d'avoir PHP et Composer installés sur votre machine. Voici les étapes pour vérifier leur installation :
 
-  1.1 Vérifier l'installation de PHP :
+  # Heading 3 #
+   Vérifier l'installation de PHP :
     - Ouvrez un terminal ou une ligne de commande.
     - Tapez la commande suivante : `php --version`
     - Si PHP est installé, vous verrez la version de PHP affichée à l'écran. Vérifiez que la version est égale ou supérieure à 7.3.0.
     - Si PHP n'est pas installé ou si la version est inférieure à 7.3.0, vous devrez installer une version plus récente de PHP. Vous pouvez le télécharger à partir du site officiel de PHP (https://www.php.net/downloads.php) et suivre les instructions d'installation appropriées pour votre système d'exploitation.
 
- 1.2 Vérifier l'installation de Composer :
+ # Heading 3 #
+  Vérifier l'installation de Composer :
    - Ouvrez un terminal ou une ligne de commande.
    - Tapez la commande suivante : `composer --version`
    - Si Composer est installé, vous verrez la version de Composer affichée à l'écran. Sinon, vous devrez installer Composer. Vous pouvez le télécharger à partir du site officiel de Composer (https://getcomposer.org/download/).
     
- 2. Ouvrez un terminal ou une ligne de commande et naviguez jusqu'au répertoire racine du projet Laravel. 
+  # Heading 2 #
+  Ouvrez un terminal ou une ligne de commande et naviguez jusqu'au répertoire racine du projet Laravel. 
+  # Heading 3 #
     - Exécutez la commande suivante pour mettre à jour les dépendances du projet : `composer update`
     - Assurez-vous d'avoir correctement configuré votre fichier .env avec les informations de la base de données.
       Exemple :
