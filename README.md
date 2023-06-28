@@ -17,22 +17,22 @@
   ## Ouvrez un terminal ou une ligne de commande et naviguez jusqu'au répertoire racine du projet Laravel. ##
 
   ### Exécutez la commande suivante pour mettre à jour les dépendances du projet : `composer update` ###
-    - Renommez le fichier .env.example en .env
-    - Assurez-vous d'avoir correctement configuré votre fichier .env avec les informations de la base de données.
-      Exemple :
-        DB_CONNECTION=mysql 
-        DB_HOST=127.0.0.1 
-        DB_PORT=3306 
-        DB_DATABASE=garage_v_parrot 
-        DB_USERNAME=root 
-        DB_PASSWORD=
-    - Exécutez la commande suivante pour exécuter les migrations et créer les tables de la base de données : `php artisan migrate`
-    - Exécutez la commande suivante pour exécuter les seeders et créer un administrateur pour le back-office : `php artisan db:seed`
-    - Vous devriez maintenant avoir un administrateur créé avec les informations suivantes :
-      Nom : Vincent Parrot
-      Email : vincent@garagevparrot.com
-      Mot de passe : vincent@garagevparrot.com
+- Renommez le fichier .env.example en .env
+- Assurez-vous d'avoir correctement configuré votre fichier .env avec les informations de la base de données.
+   Exemple :
+    DB_CONNECTION=mysql 
+    DB_HOST=127.0.0.1 
+    DB_PORT=3306 
+    DB_DATABASE=garage_v_parrot 
+    DB_USERNAME=root 
+    DB_PASSWORD=
+- Exécutez la commande suivante pour exécuter les migrations et créer les tables de la base de données : `php artisan migrate`
+- Exécutez la commande suivante pour exécuter les seeders et créer un administrateur pour le back-office : `php artisan db:seed`
+- Vous devriez maintenant avoir un administrateur créé avec les informations suivantes :
+     Nom : Vincent Parrot
+     Email : vincent@garagevparrot.com
+     Mot de passe : vincent@garagevparrot.com
      -> La création d'un administrateur est effectuée dans la méthode run() du fichier DatabaseSeeder.php, qui est généralement situé dans le répertoire database/seeders.
-    - Enfin, exécutez la commande suivante pour démarrer le serveur de développement : `php artisan serve`
-    - Vous pouvez maintenant accéder à l'application en ouvrant votre navigateur et en visitant l'URL `http://localhost:8000` 
+- Enfin, exécutez la commande suivante pour démarrer le serveur de développement : `php artisan serve`
+- Vous pouvez maintenant accéder à l'application en ouvrant votre navigateur et en visitant l'URL `http://localhost:8000` 
    
