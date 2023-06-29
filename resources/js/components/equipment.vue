@@ -1,4 +1,4 @@
-<template>
+<template> 
   <div>
     <div class="form-group" v-for="(input, index) in inputs" :key="index">
       <input
