@@ -1,41 +1,24 @@
+# App Screenshots
 
-
-
-## Voici la démarche à suivre pour exécuter l'application en local  ## 
-
-###  Assurez-vous d'avoir PHP et Composer installés sur votre machine. Voici les étapes pour vérifier leur installation  ### 
-
-
-  ####   Vérifier l'installation de PHP  #### 
-   - Ouvrez un terminal ou une ligne de commande.
-   - Tapez la commande suivante : `php --version`
-   - Si PHP est installé, vous verrez la version de PHP affichée à l'écran. Vérifiez que la version est égale ou supérieure à 7.3.0.
-   - Si PHP n'est pas installé ou si la version est inférieure à 7.3.0, vous devrez installer une version plus récente de PHP. Vous pouvez le télécharger à partir du site officiel de PHP (https://www.php.net/downloads.php) et suivre les instructions d'installation appropriées pour votre système d'exploitation.
-
- ####   Vérifier l'installation de Composer  #### 
-   - Ouvrez un terminal ou une ligne de commande.
-   - Tapez la commande suivante : `composer --version`
-   - Si Composer est installé, vous verrez la version de Composer affichée à l'écran. Sinon, vous devrez installer Composer. Vous pouvez le télécharger à partir du site officiel de Composer (https://getcomposer.org/download/).
-    
-  ###  Ouvrez un terminal ou une ligne de commande et naviguez jusqu'au répertoire racine du projet Laravel. ### 
-
-- Exécutez la commande suivante pour mettre à jour les dépendances du projet : `composer update` 
-- Renommez le fichier .env.example en .env
-- Assurez-vous d'avoir correctement configuré votre fichier .env avec les informations de la base de données.
-   Exemple :
-    DB_CONNECTION=mysql 
-    DB_HOST=127.0.0.1 
-    DB_PORT=3306 
-    DB_DATABASE=garage_v_parrot 
-    DB_USERNAME=root 
-    DB_PASSWORD=
-- Exécutez la commande suivante pour exécuter les migrations et créer les tables de la base de données : `php artisan migrate`
-- Exécutez la commande suivante pour exécuter les seeders et créer un administrateur pour le back-office : `php artisan db:seed`
-- Vous devriez maintenant avoir un administrateur créé avec les informations suivantes :
-     Nom : Vincent Parrot
-     Email : vincent@garagevparrot.com
-     Mot de passe : vincent@garagevparrot.com
-     -> La création d'un administrateur est effectuée dans la méthode run() du fichier DatabaseSeeder.php, qui est généralement situé dans le répertoire database/seeders.
-- Enfin, exécutez la commande suivante pour démarrer le serveur de développement : `php artisan serve`
-- Vous pouvez maintenant accéder à l'application en ouvrant votre navigateur et en visitant l'URL `http://localhost:8000` 
-   
+<img src="https://github.com/user-attachments/assets/d074128b-0381-4ff5-9630-ad6947d44681" alt="Login Screen" width="300"/>
+<img src="https://github.com/user-attachments/assets/8bc0f885-18c5-49de-a6ec-d2d8c022174e" alt="Dashboard" width="300"/>
+<img src="https://github.com/user-attachments/assets/9188f0e7-a8a4-4261-9eb7-c090a2d55773" alt="Filter Vehicles" width="300"/>
+<img src="https://github.com/user-attachments/assets/b8f5d69e-2797-446f-9abc-9d304ea6de1d" alt="User Management" width="300"/>
+<img src="https://github.com/user-attachments/assets/c2d2fe8e-b228-4c4e-bc25-da9315ecb8b6" alt="Create User" width="300"/>
+<img src="https://github.com/user-attachments/assets/faf46b1b-fba2-4fc6-998a-a72078244f3f" alt="Update User Information" width="300"/>
+<img src="https://github.com/user-attachments/assets/be644afd-ad74-464e-a8c0-cd36d7e1e811" alt="Delete User" width="300"/>
+<img src="https://github.com/user-attachments/assets/d990471b-7c59-4336-8b67-5a9888301a44" alt="Property Filtering" width="300"/>
+<img src="https://github.com/user-attachments/assets/0f1da2b5-348c-4c55-9e18-1de2e2897cae" alt="Property Details" width="300"/>
+<img src="https://github.com/user-attachments/assets/45758ad8-affd-4028-8527-274d3840b005" alt="Property Management" width="300"/>
+<img src="https://github.com/user-attachments/assets/a879e6b7-8b15-4b4a-b147-006a2695dba5"  width="300"/>
+<img src="https://github.com/user-attachments/assets/340d2730-f2ad-417b-b12c-c71a127766b5"   width="300"/>
+<img src="https://github.com/user-attachments/assets/fcd47c2c-f52f-446c-8bfc-42a2f6f9bbba"  width="300"/>
+<img src="https://github.com/user-attachments/assets/a66aedf9-b6cb-43e6-9c08-e635d33d1fb0"   width="300"/>
+<img src="https://github.com/user-attachments/assets/1b3164f7-456c-4dc0-a487-ab6de0cec10c"  width="300"/>
+<img src="https://github.com/user-attachments/assets/378880c0-85b2-4a06-9839-d7acab8c1659" width="300"/>
+<img src="https://github.com/user-attachments/assets/8b57efa9-3658-4db7-a74a-169190f12424"  width="300"/>
+<img src="https://github.com/user-attachments/assets/0faef8c4-ce77-4b6e-82f5-3f02cde47d96"  width="300"/>
+<img src="https://github.com/user-attachments/assets/0eea7224-8f71-47eb-8cdd-234096529ee5"   width="300"/>
+<img src="https://github.com/user-attachments/assets/b613aa70-5ce1-40a2-905c-ba3fd3926c22"  width="300"/>
+<img src="https://github.com/user-attachments/assets/3f02b45a-1267-4548-a605-2dc909265026"  width="300"/>
+<img src="https://github.com/user-attachments/assets/8d842c42-8a55-4185-bb0d-04da37340420"   width="300"/>
